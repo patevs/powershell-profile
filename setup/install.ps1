@@ -5,24 +5,23 @@
 # TODO: Check OS type and ensure running on windows
 
 $account = "patevs"
-$repo    = "dotfiles"
+$repo    = "pwsh-profile"
 $branch  = "master"
 
-$dotfilesTempDir = Join-Path $env:TEMP "dotfiles"
-if (![System.IO.Directory]::Exists($dotfilesTempDir)) {[System.IO.Directory]::CreateDirectory($dotfilesTempDir)}
-$sourceFile = Join-Path $dotfilesTempDir "dotfiles.zip"
-$dotfilesInstallDir = Join-Path $dotfilesTempDir "$repo-$branch"
+$pwshProfileTempDir = Join-Path $env:TEMP "pwsh-profile"
+if (![System.IO.Directory]::Exists($pwshProfileTempDir)) {[System.IO.Directory]::CreateDirectory($pwshProfileTempDir)}
+$sourceFile = Join-Path $pwshProfileTempDir "pwsh-profile.zip"
+$pwshProfileInstallDir = Join-Path $pwshProfileTempDir "$repo-$branch"
 
 
 function Download-File {
-  param (
-    [string]$url,
-    [string]$file
-  )
-  Write-Host "Downloading $url to $file"
-  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-  Invoke-WebRequest -Uri $url -OutFile $file
-
+    param (
+      [string]$url,
+      [string]$file
+    )
+    Write-Host "Downloading $url to $file"
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Invoke-WebRequest -Uri $url -OutFile $file
 }
 
 function Unzip-File {
@@ -56,10 +55,10 @@ function Unzip-File {
 }
 
 Download-File "https://github.com/$account/$repo/archive/$branch.zip" $sourceFile
-if ([System.IO.Directory]::Exists($dotfilesInstallDir)) {[System.IO.Directory]::Delete($dotfilesInstallDir, $true)}
+if ([System.IO.Directory]::Exists($pwshProfileInstallDir)) {[System.IO.Directory]::Delete($pwshProfileInstallDir, $true)}
 Unzip-File $sourceFile $dotfilesTempDir
 
-Push-Location "$dotfilesInstallDir\pwsh"
+Push-Location "$pwshProfileInstallDir\pwsh"
 & .\bootstrap.ps1
 Pop-Location
 
