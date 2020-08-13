@@ -47,6 +47,18 @@ cd pwsh
 
 ---
 
+## Links & Resources
+
+* [`jayharris/dotfiles-windows`](https://github.com/jayharris/dotfiles-windows)
+* [`mikemaccana/powershell-profile`](https://github.com/mikemaccana/powershell-profile)
+* [`felixriesebery/windows-development-environment`](https://github.com/felixrieseberg/windows-development-environment)
+
+[](.)
+
+* [PowerShell Prompts](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7)
+
+---
+
 ## Project Structure
 
 ```md
