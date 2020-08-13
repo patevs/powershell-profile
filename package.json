@@ -1,12 +1,12 @@
 {
-  "name": "pwsh-profile",
+  "name": "powershell-profile",
   "version": "0.1.0",
   "description": "PowerShell Script Template",
   "author": "PatEvs",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patevs/pwsh-profile.git"
+    "url": "git+https://github.com/patevs/powershell-profile.git"
   },
   "scripts": {
     "release": "np",
