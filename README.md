@@ -1,4 +1,4 @@
-# pwsh-profile
+# PowerShell Profile
 
 > PatEvs' `PowerShell` profile.
 
@@ -11,8 +11,8 @@
 Clone the repository:
 
 ```powershell
-git clone https://github.com/patevs/pwsh-profile.git
-cd pwsh-profile
+git clone https://github.com/patevs/powershell-profile.git
+cd powershell-profile
 ```
 
 Install `PowerShell` profile:
@@ -29,7 +29,7 @@ cd pwsh
 To install these dotfiles from PowerShell without Git:
 
 ```powershell
-iex ((new-object net.webclient).DownloadString('https://raw.github.com/patevs/pwsh-profile/master/setup/install.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.github.com/patevs/powershell-profile/master/setup/install.ps1'))
 ```
 
 To update later on, just run that command again.
@@ -53,7 +53,8 @@ cd pwsh
 .
 ├── pwsh
 │   ├── bootstrap.ps1
-│   └── Microsoft.PowerShell_profile.ps1
+│   ├── Microsoft.PowerShell_profile.ps1
+│   └── windows.ps1
 ├── setup
 │   └── install.ps1
 ├── .commitlintrc.json
