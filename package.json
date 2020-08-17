@@ -18,5 +18,22 @@
     "commitlint-config-gitmoji": "^1.0.1",
     "husky": "^4.2.5",
     "np": "^6.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "./node_modules/commitlint-config-gitmoji"
+    ],
+    "rules": {
+      "header-max-length": [
+        0,
+        "always",
+        80
+      ]
+    }
   }
 }
