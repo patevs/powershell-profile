@@ -35,22 +35,13 @@ Set-Alias -Name desktop -Value dt
 # ==========================
 
 # Reload the shell
-Set-Alias -Name reload -Value ReloadPowershell
+Set-Alias -Name reload -Value Reload-Powershell
 
 # Get current PowerShell version
 ${function:version} = { $PSVersionTable.PSVersion }
 
 # Get installed PowerShell modules
 ${function:modules} = { Get-Module -ListAvailable }
-
-# Ensure `thefuck` is installed
-if (which thefuck){
-  # Correct the previous command using `thefuck`
-  $env:PYTHONIOENCODING="utf-8"
-  Invoke-Expression "$(thefuck --alias)"
-  # Unset PYTHONIOENCODING environment variable
-  Remove-Item env:PYTHONIOENCODING
-}
 
 # ------------------------------------------------------------------------------------------------------- #
 
@@ -83,14 +74,20 @@ Set-Alias -Name emptytrash -Value EmptyRecycleBin
 # Cleanup old files all drives
 Set-Alias -Name cleandisks -Value CleanDisks
 
-# Reload the shell
-Set-Alias -Name reload -Value ReloadPowershell
-
 # Update installed Ruby Gems, NPM, and their installed packages.
 # Set-Alias -Name update -Value SystemUpdate
 
 # Set neovim as default vim
 Set-Alias -Name vim -Value nvim
+
+# Ensure `thefuck` is installed
+if (which thefuck){
+  # Correct the previous command using `thefuck`
+  $env:PYTHONIOENCODING="utf-8"
+  Invoke-Expression "$(thefuck --alias)"
+  # Unset PYTHONIOENCODING environment variable
+  Remove-Item env:PYTHONIOENCODING
+}
 
 # ------------------------------------------------------------------------------------------------------- #
 

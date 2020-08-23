@@ -90,7 +90,7 @@ function settings {
 # ---------------------------- #
 
 # Reload the Shell
-function ReloadPowershell {
+function Invoke-Powershell {
   $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
   $newProcess.Arguments = "-nologo";
   [System.Diagnostics.Process]::Start($newProcess);
@@ -100,13 +100,13 @@ function ReloadPowershell {
 
 # Set the current console title
 # https://blogs.technet.microsoft.com/heyscriptingguy/2012/12/30/powertip-change-the-powershell-console-title
-function set-title([string]$newtitle) {
+function Set-ConsoleTitle([string]$newtitle) {
   $host.ui.RawUI.WindowTitle = $newtitle + ' – ' + $host.ui.RawUI.WindowTitle
 }
 
 # Reset the console colors
 # https://stackoverflow.com/a/42624497
-function reset-colors {
+function Reset-Console {
   [Console]::ResetColor()
 }
 
@@ -128,7 +128,7 @@ function SystemUpdate() {
 #>
 
 # https://stackoverflow.com/a/7330368
-function WindowsBuild {
+function Get-WindowsBuild {
   # [System.Environment]::OSVersion.Version
   [Environment]::OSVersion
 }
@@ -216,13 +216,20 @@ function AppendEnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 # ------------- #
 
 # Print Git Status
-# function Get-GitStatus { }
+#function Get-GitStatus {
+    # Print-Green-Underline "Git Status:"
+  # Write-Output "`n Git Status:`n"
+  #Write-Green "TEST"
+  # TODO: Ensure PSWrite-Color is installed
+  #Write-Color "`n Git Status `n" -Color Green
+  #git status
+#}
 
 # Print Git Status
 function gs {
   # Print-Green-Underline "Git Status:"
   # Write-Output "`n Git Status:`n"
-  Write-Green "TEST"
+  #Write-Green "TEST"
   # TODO: Ensure PSWrite-Color is installed
   Write-Color "`n Git Status `n" -Color Green
   git status
