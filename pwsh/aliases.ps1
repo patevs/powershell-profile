@@ -38,7 +38,7 @@ Set-Alias -Name desktop -Value dt
 Set-Alias -Name reload -Value Reload-Powershell
 
 # Get current PowerShell version
-${function:version} = { $PSVersionTable.PSVersion }
+${function:version} = { Get-Version }
 
 # Get installed PowerShell modules
 ${function:modules} = { Get-Module -ListAvailable }
