@@ -129,8 +129,13 @@ function SystemUpdate() {
 
 # https://stackoverflow.com/a/7330368
 function Get-WindowsBuild {
-  # [System.Environment]::OSVersion.Version
+  Write-Green "WINDOWS ENVIRONMENT"
   [Environment]::OSVersion
+  [System.Environment]::OSVersion.Version
+}
+
+function Get-Version {
+  $PSVersionTable.PSVersion; Get-WindowsBuild
 }
 
 # function get-serial-number {
