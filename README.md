@@ -1,6 +1,6 @@
 # PowerShell Profile
 
-> PatEvs' `PowerShell` profile.
+> PatEvs' `PowerShell` 5.x and `pwsh` 7.x profile.
 
 ---
 
@@ -10,14 +10,10 @@
 
 Clone the repository:
 
-```powershell
+```sh
 git clone https://github.com/patevs/powershell-profile.git
 cd powershell-profile
-```
-
-Install `PowerShell` profile:
-
-```powershell
+# Install `PowerShell` profile:
 cd pwsh
 .\bootstrap.ps1
 ```
@@ -26,7 +22,7 @@ cd pwsh
 
 > **Note:** You must have your execution policy set to unrestricted (or at least in bypass) for this to work. To set this, run `Set-ExecutionPolicy Unrestricted` from a PowerShell running as Administrator.
 
-To install these dotfiles from PowerShell without Git:
+To install these dotfiles from `PowerShell` without Git:
 
 ```powershell
 iex ((new-object net.webclient).DownloadString('https://raw.github.com/patevs/powershell-profile/master/setup/install.ps1'))
@@ -49,7 +45,10 @@ cd pwsh
 
 ## Links & Resources
 
-* [`jayharris/dotfiles-windows`](https://github.com/jayharris/dotfiles-windows)
+* **[`jayharris/dotfiles-windows`](https://github.com/jayharris/dotfiles-windows)**
+
+[](.)
+
 * [`mikemaccana/powershell-profile`](https://github.com/mikemaccana/powershell-profile)
 * [`felixriesebery/windows-development-environment`](https://github.com/felixrieseberg/windows-development-environment)
 
