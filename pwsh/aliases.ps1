@@ -63,7 +63,7 @@ Set-Alias -Name reboot -Value restart
 Set-Alias -Name mkd -Value CreateAndSetDirectory
 
 # Remove a given item
-Set-Alias -Name del -Value RemoveItem -option AllScope -Force
+Set-Alias -Name del -Value Remove-Item -option AllScope -Force
 
 # Send an item to the Recycle Bin
 Set-Alias -Name trash -Value Remove-ItemSafely
@@ -128,6 +128,8 @@ Set-Alias -Name time -Value Measure-Command
 
 # Git clone and cd
 Set-Alias -Name gcd -Value Invoke-GitClone
+Set-Alias -Name gc -Value Invoke-GitClone
+Set-Alias -Name hc -Value Invoke-GitClone
 
 # ls with git status
 ${function:lsg} = { Write-Host ""; bash C:\bin\ls-with-git-status\lsg }

@@ -158,7 +158,7 @@ function CreateAndSetDirectory([String] $path) {
 }
 
 # Delete a given item
-function RemoveItem([string]$path) {
+function Remove-Item([string]$path) {
   Remove-Item -Path $path -Recurse -Force
 }
 
