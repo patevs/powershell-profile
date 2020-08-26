@@ -48,6 +48,7 @@ if (Get-Module -ListAvailable PSReadLine -ErrorAction SilentlyContinue) {
 
 # Remove 'posh~git' prefix from terminal title
 # https://github.com/dahlbyk/posh-git/issues/424#issue-208094847
+# TODO: Ensure posh-git is installed
 $Global:GitPromptSettings.EnableWindowTitle = $true
 
 # Dracula Prompt Configuration
