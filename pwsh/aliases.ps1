@@ -126,6 +126,8 @@ Set-Alias -Name time -Value Measure-Command
 # Git & GitHub Aliases
 # ====================
 
+Set-Alias -Name gs -Value Get-GitStatus
+
 # Git clone and cd
 Set-Alias -Name gcd -Value Invoke-GitClone
 Set-Alias -Name gc -Value Invoke-GitClone

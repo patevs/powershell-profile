@@ -221,21 +221,7 @@ function AppendEnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 # ------------- #
 
 # Print Git Status
-#function Get-GitStatus {
-    # Print-Green-Underline "Git Status:"
-  # Write-Output "`n Git Status:`n"
-  #Write-Green "TEST"
-  # TODO: Ensure PSWrite-Color is installed
-  #Write-Color "`n Git Status `n" -Color Green
-  #git status
-#}
-
-# Print Git Status
-function gs {
-  # Print-Green-Underline "Git Status:"
-  # Write-Output "`n Git Status:`n"
-  #Write-Green "TEST"
-  # TODO: Ensure PSWrite-Color is installed
+function Get-GitStatus {
   Write-Color "`n Git Status `n" -Color Green
   git status
 }
