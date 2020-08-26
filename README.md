@@ -61,20 +61,15 @@ cd pwsh
 
 ```md
 .
-├── pwsh
-│   ├── bootstrap.ps1
-│   ├── Microsoft.PowerShell_profile.ps1
-│   └── windows.ps1
-├── setup
+├── pwsh                # PowerShell profile
+├── setup               # Install script
 │   └── install.ps1
-├── .commitlintrc.json
-├── .editorconfig
-├── .gitignore
-├── .huskyrc
-├── .np-config.json
-├── LICENSE
-├── package.json
-└── README.md
+├── .editorconfig       # Editor configuration
+├── .gitignore          # Git ignore rules
+├── .np-config.json     # NPM publish (np) configuration
+├── LICENSE             # Project LICENSE
+├── package.json        # NPM package configuration
+└── README.md           # Project README
 ```
 
 ---
