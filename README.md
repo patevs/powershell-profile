@@ -6,14 +6,13 @@
 
 ## Installation and Usage Instructions
 
-### Using Git and the bootstrap scripts
-
-Clone the repository:
+### Using Git and the bootstrap script
 
 ```sh
+# Clone the repository
 git clone https://github.com/patevs/powershell-profile.git
 cd powershell-profile
-# Install `PowerShell` profile:
+# Install the profile:
 cd pwsh
 .\bootstrap.ps1
 ```
