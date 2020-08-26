@@ -6,14 +6,13 @@
 
 ## Installation and Usage Instructions
 
-### Using Git and the bootstrap scripts
-
-Clone the repository:
+### Using Git and the bootstrap script
 
 ```sh
+# Clone the repository
 git clone https://github.com/patevs/powershell-profile.git
 cd powershell-profile
-# Install `PowerShell` profile:
+# Install the profile:
 cd pwsh
 .\bootstrap.ps1
 ```
@@ -62,20 +61,15 @@ cd pwsh
 
 ```md
 .
-├── pwsh
-│   ├── bootstrap.ps1
-│   ├── Microsoft.PowerShell_profile.ps1
-│   └── windows.ps1
-├── setup
+├── pwsh                # PowerShell profile
+├── setup               # Install script
 │   └── install.ps1
-├── .commitlintrc.json
-├── .editorconfig
-├── .gitignore
-├── .huskyrc
-├── .np-config.json
-├── LICENSE
-├── package.json
-└── README.md
+├── .editorconfig       # Editor configuration
+├── .gitignore          # Git ignore rules
+├── .np-config.json     # NPM publish (np) configuration
+├── LICENSE             # Project LICENSE
+├── package.json        # NPM package configuration
+└── README.md           # Project README
 ```
 
 ---
