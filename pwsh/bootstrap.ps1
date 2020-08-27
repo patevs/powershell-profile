@@ -4,6 +4,9 @@
 
 # TODO: Check current powershell version and reload shell
 
+# Core   C:\Users\xxx\Documents\PowerShell
+# Legacy C:\Users\xxx\Documents\WindowsPowerShell
+
 $profileDir = Split-Path -parent $profile
 $componentDir = Join-Path $profileDir "components"
 
