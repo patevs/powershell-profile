@@ -227,14 +227,6 @@ function Get-GitStatus {
   git status
 }
 
-# Print Git Status
-function gs {
-  # TODO: Ensure PSWrite-Color is installed
-  # Write-Color "`n Git Status `n" -Color Green
-  # git status
-  Get-GitStatus
-}
-
 # Print git status using g3l
 function gss {
   # Fetch git remote
