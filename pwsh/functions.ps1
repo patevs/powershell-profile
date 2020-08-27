@@ -158,7 +158,7 @@ function CreateAndSetDirectory([String] $path) {
 }
 
 # Delete a given item
-function RemoveItem([string]$path) {
+function Remove-Item([string]$path) {
   Remove-Item -Path $path -Recurse -Force
 }
 
@@ -230,16 +230,12 @@ function Get-GitStatus {
 # Print git status using g3l
 function gss {
   # Fetch git remote
-  # Print-Green-Underline "Git Remotes:"
   Write-Output "`n Git Remotes:`n"
   git remote -v
-  # Print-Green-Underline "Git Status:"
-  # TODO: Reuse gs function
   Write-Output "`n Git Status:`n"
   git status
-  # TODO: Ensure g3l command exists
   Write-Output "" # new line
-  g3l --status
+  g3l --status # TODO: Ensure g3l command exists
 }
 
 # Clone a git repository and cd into the created directory
