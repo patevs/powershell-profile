@@ -35,7 +35,7 @@ Set-Alias -Name desktop -Value dt
 # ==========================
 
 # Reload the shell
-Set-Alias -Name reload -Value Reload-Powershell
+Set-Alias -Name reload -Value Invoke-Powershell
 
 # Get current PowerShell version
 ${function:version} = { Get-Version }
