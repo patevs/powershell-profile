@@ -112,6 +112,13 @@ function Reset-Console-Colors {
   [Console]::ResetColor()
 }
 
+function Reset-Console {
+  # Reset console colors
+  Reset-Console-Colors
+  # Clear the console
+  Clear-Host
+}
+
 # ------------------------ #
 # System Utility Functions | ---------------------------------------------------------------------------- #
 # ------------------------ #
