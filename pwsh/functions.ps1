@@ -14,7 +14,7 @@
 # $background = (get-host).ui.rawui.BackgroundColor
 # Set-Variable background -option Constant -value (get-host).ui.rawui.BackgroundColor
 
-function Write-Green($str) {
+function Write-BoldGreen($str) {
   # TODO: Ensure PSWrite-Color is installed
   # Current console background color
   $BG = (get-host).ui.rawui.BackgroundColor
