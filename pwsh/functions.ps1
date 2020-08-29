@@ -96,7 +96,7 @@ function Invoke-Powershell {
   $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
   $newProcess.Arguments = "-nologo";
   [System.Diagnostics.Process]::Start($newProcess);
-  exit
+  # exit
 }
 # function ReloadPowershell { & $profile }
 
