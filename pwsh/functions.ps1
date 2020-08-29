@@ -14,11 +14,11 @@
 # $background = (get-host).ui.rawui.BackgroundColor
 # Set-Variable background -option Constant -value (get-host).ui.rawui.BackgroundColor
 
-function Write-Green($str) {
-  # Write-Color "`n Git Status `n" -Color Green
-  Write-Host "`n"
-  Write-Color " $str " -BackGroundColor Green -Color (get-host).ui.rawui.BackgroundColor
-  Write-Host "`n"
+function Write-Green-Bold($str) {
+  $BG = (get-host).ui.rawui.BackgroundColor
+  Write-Color "`n" -B $BG # New line
+  Write-Color " $str " -B Green -C $BG
+  Write-Color "`n" -B $BG # New line
 }
 
 # -------------- #
