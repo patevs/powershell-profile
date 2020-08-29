@@ -14,11 +14,13 @@
 # $background = (get-host).ui.rawui.BackgroundColor
 # Set-Variable background -option Constant -value (get-host).ui.rawui.BackgroundColor
 
-function Write-Green($str) {
-  # Write-Color "`n Git Status `n" -Color Green
-  Write-Host "`n"
-  Write-Color " $str " -BackGroundColor Green -Color (get-host).ui.rawui.BackgroundColor
-  Write-Host "`n"
+function Write-BoldGreen($str) {
+  # TODO: Ensure PSWrite-Color is installed
+  # Current console background color
+  $BG = (get-host).ui.rawui.BackgroundColor
+  Write-Color "`n" -B $BG -NoNewLine
+  Write-Color " $str " -B Green -C $BG
+  Write-Color "`n" -B $BG -NoNewLine
 }
 
 # -------------- #
@@ -94,7 +96,7 @@ function Invoke-Powershell {
   $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
   $newProcess.Arguments = "-nologo";
   [System.Diagnostics.Process]::Start($newProcess);
-  exit
+  # exit
 }
 # function ReloadPowershell { & $profile }
 
@@ -106,8 +108,15 @@ function Set-ConsoleTitle([string]$newtitle) {
 
 # Reset the console colors
 # https://stackoverflow.com/a/42624497
-function Reset-Console {
+function Reset-Console-Colors {
   [Console]::ResetColor()
+}
+
+function Reset-Console {
+  # Reset console colors
+  Reset-Console-Colors
+  # Clear the console
+  Clear-Host
 }
 
 # ------------------------ #
@@ -222,8 +231,8 @@ function AppendEnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 
 # Print Git Status
 function Get-GitStatus {
-  # TODO: Ensure PSWrite-Color is installed
-  Write-Color "`n Git Status `n" -Color Green
+  # Write-Host "`n Git Status `n" -Color Green
+  Write-BoldGreen "Git Status"
   git status
 }
 
