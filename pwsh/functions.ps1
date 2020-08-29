@@ -108,7 +108,7 @@ function Set-ConsoleTitle([string]$newtitle) {
 
 # Reset the console colors
 # https://stackoverflow.com/a/42624497
-function Reset-Console {
+function Reset-Console-Colors {
   [Console]::ResetColor()
 }
 
