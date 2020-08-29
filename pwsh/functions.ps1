@@ -15,6 +15,7 @@
 # Set-Variable background -option Constant -value (get-host).ui.rawui.BackgroundColor
 
 function Write-Green-Bold($str) {
+  # TODO: Ensure PSWrite-Color is installed
   # Current console background color
   $BG = (get-host).ui.rawui.BackgroundColor
   Write-Color "`n" -B $BG # New line
@@ -224,7 +225,7 @@ function AppendEnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 # Print Git Status
 function Get-GitStatus {
   # TODO: Ensure PSWrite-Color is installed
-  Write-Color "`n Git Status `n" -Color Green
+  # Write-Color "`n Git Status `n" -Color Green
   git status
 }
 
