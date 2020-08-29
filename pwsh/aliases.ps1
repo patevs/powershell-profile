@@ -34,6 +34,9 @@ Set-Alias -Name desktop -Value dt
 # PowerShell Utility Aliases
 # ==========================
 
+# Clear and reload the console
+${function:cls} = { Reset-Console }
+
 # Reload the shell
 Set-Alias -Name reload -Value Invoke-Powershell
 
