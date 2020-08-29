@@ -15,6 +15,7 @@
 # Set-Variable background -option Constant -value (get-host).ui.rawui.BackgroundColor
 
 function Write-Green-Bold($str) {
+  # Current console background color
   $BG = (get-host).ui.rawui.BackgroundColor
   Write-Color "`n" -B $BG # New line
   Write-Color " $str " -B Green -C $BG
