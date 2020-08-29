@@ -231,8 +231,8 @@ function AppendEnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 
 # Print Git Status
 function Get-GitStatus {
-  # Write-Color "`n Git Status `n" -Color Green
-  Write-Green-Bold "Git Status"
+  # Write-Host "`n Git Status `n" -Color Green
+  Write-BoldGreen "Git Status"
   git status
 }
 
