@@ -30,6 +30,10 @@ Set-Environment "JAVA_HOME" "C:\Program Files\Java\jdk1.8.0_211"
 # MSBuild
 # Set-Environment "MSBUILD_HOME" "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current"
 
+# NPM Root
+# TODO: Use `npm -g root` command instead
+Set-Environment "NODE_PATH" "C:\Users\Pat\scoop\persist\nodejs-lts\bin\node_modules"
+
 # Python Output Encoding
 # Set-Environment "PYTHONIOENCODING" "utf-8"
 

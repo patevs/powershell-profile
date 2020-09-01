@@ -9,15 +9,13 @@
     "url": "git+https://github.com/patevs/powershell-profile.git"
   },
   "scripts": {
-    "release": "np",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "release": "np"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "commitlint-config-gitmoji": "^1.0.1",
     "husky": "^4.2.5",
-    "np": "^6.4.0"
+    "np": "^6.5.0"
   },
   "commitlint": {
     "extends": [
