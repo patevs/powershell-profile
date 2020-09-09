@@ -21,6 +21,7 @@ ${function:dev} = { Set-Location ~\code }
 ${function:docs} = { Set-Location ~\Documents }
 ${function:dl} = { Set-Location ~\Downloads }
 ${function:dt} = { Set-Location ~\Desktop }
+${function:work} = { Set-Location ~\work }
 
 Set-Alias -Name desk -Value dt
 Set-Alias -Name desktop -Value dt
