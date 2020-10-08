@@ -239,6 +239,19 @@ function Get-GitStatus {
 # Print git status using g3l
 function gss {
   # Fetch git remote
+  Write-BoldGreen "Git Remotes"
+  git remote -v
+  Get-GitStatus
+  # Git branch status
+  # Write-BoldGreen "Local Branches"
+  g3l --status
+  # Write-BoldGreen "Remote Branches"
+  # gbs --remotes
+}
+
+<#
+function gss {
+  # Fetch git remote
   # Print-Green-Underline "Git Remotes:"
   Write-Output "`n Git Remotes:`n"
   git remote -v
@@ -250,6 +263,7 @@ function gss {
   Write-Output "" # new line
   g3l --status
 }
+#>
 
 # Clone a git repository and cd into the created directory
 # https://stackoverflow.com/a/32539370/6346131
@@ -266,14 +280,16 @@ function Invoke-GitClone($url) {
 # Print list of local NPM dependencies
 function npl {
   # Print-Green-Underline "Local NPM Dependencies:"
-  Write-Output "`n Local NPM Dependencies: `n"
+  # Write-Output "`n Local NPM Dependencies: `n"
+  Write-BoldGreen "Local NPM Packages"
   npm list --depth=0
 }
 
 # Print list of global NPM dependencies
 function nplg {
   # Print-Green-Underline "Global NPM Dependencies:"
-  Write-Output "`n Global NPM Dependencies: `n"
+  # Write-Output "`n Global NPM Dependencies: `n"
+  Write-BoldGreen "Global NPM Packages"
   npm list --global --depth=0
 }
 
@@ -284,14 +300,16 @@ function nplg {
 # Print list of local chocolatey installations
 function cll {
   # Print-Green-Underline "Local Chocolatey Installations:"
-  Write-Output "`n Local Chocolatey Installations:`n"
+  # Write-Output "`n Local Chocolatey Installations:`n"
+  Write-BoldGreen "Local Chocolatey Installations"
   choco list -l
 }
 
 # Print list of outdated chocolatey installations
 function clo {
   # Print-Green-Underline "Outdated Chocolatey Installations:"
-  Write-Output "`n Outdated Chocolatey Installations:`n"
+  # Write-Output "`n Outdated Chocolatey Installations:`n"
+  Write-BoldGreen "Outdated Chocolatey Installations"
   choco upgrade all --noop
 }
 
