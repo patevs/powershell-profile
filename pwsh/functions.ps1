@@ -243,9 +243,10 @@ function gss {
   git remote -v
   Get-GitStatus
   # Git branch status
-  Write-Output "" # New line
+  # Write-BoldGreen "Local Branches"
   g3l --status
-  gbs --remotes
+  # Write-BoldGreen "Remote Branches"
+  # gbs --remotes
 }
 
 <#
