@@ -289,7 +289,7 @@ function npl {
 function nplg {
   # Print-Green-Underline "Global NPM Dependencies:"
   # Write-Output "`n Global NPM Dependencies: `n"
-  Write-BoldGreen "Local NPM Packages"
+  Write-BoldGreen "Global NPM Packages"
   npm list --global --depth=0
 }
 
