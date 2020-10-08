@@ -300,7 +300,8 @@ function nplg {
 # Print list of local chocolatey installations
 function cll {
   # Print-Green-Underline "Local Chocolatey Installations:"
-  Write-Output "`n Local Chocolatey Installations:`n"
+  # Write-Output "`n Local Chocolatey Installations:`n"
+  Write-BoldGreen "Local Chocolatey Installations"
   choco list -l
 }
 
