@@ -308,7 +308,8 @@ function cll {
 # Print list of outdated chocolatey installations
 function clo {
   # Print-Green-Underline "Outdated Chocolatey Installations:"
-  Write-Output "`n Outdated Chocolatey Installations:`n"
+  # Write-Output "`n Outdated Chocolatey Installations:`n"
+  Write-BoldGreen "Outdated Chocolatey Installations"
   choco upgrade all --noop
 }
 
