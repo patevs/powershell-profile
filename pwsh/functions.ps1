@@ -280,7 +280,8 @@ function Invoke-GitClone($url) {
 # Print list of local NPM dependencies
 function npl {
   # Print-Green-Underline "Local NPM Dependencies:"
-  Write-Output "`n Local NPM Dependencies: `n"
+  # Write-Output "`n Local NPM Dependencies: `n"
+  Write-BoldGreen "Local NPM Packages"
   npm list --depth=0
 }
 
