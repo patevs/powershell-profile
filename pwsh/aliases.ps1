@@ -17,6 +17,7 @@ ${function:.....} = { Set-Location ..\..\..\.. }
 ${function:......} = { Set-Location ..\..\..\..\.. }
 
 # Navigation Shortcuts
+${function:bin} = { Set-Location C:\bin }
 ${function:dev} = { Set-Location ~\code }
 ${function:doc} = { Set-Location ~\Documents }
 ${function:dl} = { Set-Location ~\Downloads }
