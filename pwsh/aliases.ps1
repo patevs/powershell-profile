@@ -141,14 +141,14 @@ ${function:gs} = { Get-GitStatus }
 Set-Alias -Name gcd -Value Invoke-GitClone
 
 # ls with git status
-${function:lsg} = { Write-Host ""; bash C:\bin\ls-with-git-status\lsg }
+${function:lsg} = { Write-Host ""; bash C:\bin\ls-with-git-status\lsg @args }
 # Set-Alias -Name ls -Value lsg -option AllScope -Force
 
 # Git branch status
-${function:gbs} = { Write-Host ""; bash C:\bin\git-branch-status\git-branch-status -l }
+${function:gbs} = { Write-Host ""; bash C:\bin\git-branch-status\git-branch-status @args }
 
 # Git Multi Status
-${function:mgs} = { bash C:\bin\multi-git-status\mgitstatus --depth=0 }
+${function:mgs} = { bash C:\bin\multi-git-status\mgitstatus --depth=0 @args }
 
 # Favour GitHub's hub client over vanilla git
 if (Get-Command hub -ErrorAction SilentlyContinue) { Set-Alias -Name git -Value hub }
