@@ -239,6 +239,18 @@ function Get-GitStatus {
 # Print git status using g3l
 function gss {
   # Fetch git remote
+  Write-BoldGreen "Git Remotes"
+  git remote -v
+  Get-GitStatus
+  # Git branch status
+  Write-Output "" # New line
+  g3l --status
+  gbs --remotes
+}
+
+<#
+function gss {
+  # Fetch git remote
   # Print-Green-Underline "Git Remotes:"
   Write-Output "`n Git Remotes:`n"
   git remote -v
@@ -250,6 +262,7 @@ function gss {
   Write-Output "" # new line
   g3l --status
 }
+#>
 
 # Clone a git repository and cd into the created directory
 # https://stackoverflow.com/a/32539370/6346131
