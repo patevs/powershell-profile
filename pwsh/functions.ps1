@@ -313,4 +313,15 @@ function clo {
   choco upgrade all --noop
 }
 
+# --------------- #
+# Scoop Functions | -------------------------------------------------------------------------------- #
+# --------------- #
+
+# Print list of local scoop installations
+function sll {
+  # Write-Output "`n Local Scoop Installations:`n"
+  Write-BoldGreen "Local Scoop Installations"
+  scoop list
+}
+
 # ----------------------------------------------- # EOF # ----------------------------------------------- #
