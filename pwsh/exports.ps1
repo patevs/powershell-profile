@@ -29,6 +29,7 @@ Set-Environment "GIT_HOME" "C:\Program Files\Git"
 # Set-Environment "JAVA_HOME" "C:\Program Files\Java\jdk1.8.0_211"
 ## Java 15
 # Set-Environment "JAVA_HOME" "C:\Program Files\OpenJDK\jdk-15.0.1"
+# Set-Environment "JAVA_HOME "C:\Users\Pat\scoop\apps\openjdk\current"
 
 # MSBuild
 # Set-Environment "MSBUILD_HOME" "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current"
