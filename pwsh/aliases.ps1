@@ -70,6 +70,9 @@ Set-Alias -Name reboot -Value restart
 # Create a new directory and enter it
 Set-Alias -Name mkd -Value CreateAndSetDirectory
 
+# Open a given file
+Set-Alias -Name o -Value open
+
 # Remove a given item
 Set-Alias -Name del -Value RemoveItem -option AllScope -Force
 
