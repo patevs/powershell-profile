@@ -1,6 +1,6 @@
 {
   "name": "powershell-profile",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "PowerShell Script Template",
   "author": "PatEvs",
   "license": "MIT",
@@ -22,8 +22,14 @@
       "gitmoji"
     ],
     "rules": {
-      "type-empty": [0, "never"],
-      "subject-empty": [0, "never"]
+      "type-empty": [
+        0,
+        "never"
+      ],
+      "subject-empty": [
+        0,
+        "never"
+      ]
     }
   },
   "husky": {
