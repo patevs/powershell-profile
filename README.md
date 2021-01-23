@@ -13,7 +13,6 @@
 git clone https://github.com/patevs/powershell-profile.git
 cd powershell-profile
 # Install the profile:
-cd pwsh
 .\bootstrap.ps1
 ```
 
@@ -62,13 +61,14 @@ cd pwsh
 ```md
 .
 ├── pwsh                # PowerShell profile
-├── setup               # Install script
+├── setup               # Git-free install script
 │   └── install.ps1
 ├── .editorconfig       # Editor configuration
 ├── .gitignore          # Git ignore rules
 ├── .np-config.json     # NPM publish (np) configuration
 ├── LICENSE             # Project LICENSE
 ├── package.json        # NPM package configuration
+├── bootstrap.ps1       # Installation script
 └── README.md           # Project README
 ```
 
