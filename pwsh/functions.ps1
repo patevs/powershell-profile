@@ -244,7 +244,7 @@ function gss {
   Get-GitStatus
   # Git branch status
   # Write-BoldGreen "Local Branches"
-  g3l --status
+  if (which g3l) { g3l --status }
   # Write-BoldGreen "Remote Branches"
   # gbs --remotes
 }
