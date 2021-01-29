@@ -244,26 +244,10 @@ function gss {
   Get-GitStatus
   # Git branch status
   # Write-BoldGreen "Local Branches"
-  g3l --status
+  if (which g3l) { g3l --status }
   # Write-BoldGreen "Remote Branches"
   # gbs --remotes
 }
-
-<#
-function gss {
-  # Fetch git remote
-  # Print-Green-Underline "Git Remotes:"
-  Write-Output "`n Git Remotes:`n"
-  git remote -v
-  # Print-Green-Underline "Git Status:"
-  # TODO: Reuse gs function
-  Write-Output "`n Git Status:`n"
-  git status
-  # TODO: Ensure g3l command exists
-  Write-Output "" # new line
-  g3l --status
-}
-#>
 
 # Clone a git repository and cd into the created directory
 # https://stackoverflow.com/a/32539370/6346131
