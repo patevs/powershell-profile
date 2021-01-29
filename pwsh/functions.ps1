@@ -249,22 +249,6 @@ function gss {
   # gbs --remotes
 }
 
-<#
-function gss {
-  # Fetch git remote
-  # Print-Green-Underline "Git Remotes:"
-  Write-Output "`n Git Remotes:`n"
-  git remote -v
-  # Print-Green-Underline "Git Status:"
-  # TODO: Reuse gs function
-  Write-Output "`n Git Status:`n"
-  git status
-  # TODO: Ensure g3l command exists
-  Write-Output "" # new line
-  g3l --status
-}
-#>
-
 # Clone a git repository and cd into the created directory
 # https://stackoverflow.com/a/32539370/6346131
 function Invoke-GitClone($url) {
