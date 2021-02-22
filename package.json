@@ -9,6 +9,7 @@
     "url": "git+https://github.com/patevs/powershell-profile.git"
   },
   "scripts": {
+    "updates": "npx ncu",
     "release": "np"
   },
   "devDependencies": {
