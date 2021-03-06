@@ -72,6 +72,7 @@ Set-Alias -Name rs -Value restart
 
 # Logout current user
 ${function:logout} = { logoff }
+Set-Alias -Name lo -Value logout
 
 # Create a new directory and enter it
 Set-Alias -Name mkd -Value CreateAndSetDirectory
