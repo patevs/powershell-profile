@@ -62,10 +62,17 @@ ${function:neofetch} = { bash C:\bin\neofetch\neofetch }
 # Shutdown System
 ${function:shutdown} = { Stop-Computer -ComputerName localhost }
 Set-Alias -Name shut -Value shutdown
+Set-Alias -Name sd -Value shutdown
 
 # Restart System
 ${function:restart} = { Restart-Computer }
 Set-Alias -Name reboot -Value restart
+Set-Alias -Name rb -Value restart
+Set-Alias -Name rs -Value restart
+
+# Logout current user
+${function:logout} = { logoff }
+Set-Alias -Name lo -Value logout
 
 # Create a new directory and enter it
 Set-Alias -Name mkd -Value CreateAndSetDirectory
