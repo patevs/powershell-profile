@@ -68,6 +68,7 @@ Set-Alias -Name sd -Value shutdown
 ${function:restart} = { Restart-Computer }
 Set-Alias -Name reboot -Value restart
 Set-Alias -Name rb -Value restart
+Set-Alias -Name rs -Value restart
 
 # Create a new directory and enter it
 Set-Alias -Name mkd -Value CreateAndSetDirectory
