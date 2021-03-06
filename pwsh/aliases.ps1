@@ -62,6 +62,7 @@ ${function:neofetch} = { bash C:\bin\neofetch\neofetch }
 # Shutdown System
 ${function:shutdown} = { Stop-Computer -ComputerName localhost }
 Set-Alias -Name shut -Value shutdown
+Set-Alias -Name sd -Value shutdown
 
 # Restart System
 ${function:restart} = { Restart-Computer }
