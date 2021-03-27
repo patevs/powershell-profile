@@ -52,6 +52,7 @@ cd pwsh
 
 [](.)
 
+* [`oh-my-posh`](https://github.com/JanDeDobbeleer/oh-my-posh) A prompt theme engine for any shell.
 * [PowerShell Prompts](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7)
 
 ---
