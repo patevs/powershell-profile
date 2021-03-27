@@ -49,6 +49,7 @@ cd pwsh
 
 * [`mikemaccana/powershell-profile`](https://github.com/mikemaccana/powershell-profile)
 * [`felixriesebery/windows-development-environment`](https://github.com/felixrieseberg/windows-development-environment)
+* [`jez/dotfiles`](https://github.com/jez/dotfiles)
 
 [](.)
 
