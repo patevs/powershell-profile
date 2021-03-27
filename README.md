@@ -63,12 +63,12 @@ cd pwsh
 ```md
 .
 ├── pwsh                # PowerShell profile
-├── setup               # Git-free install script
-│   └── install.ps1
+├── setup
+│   └── install.ps1     # Git-free install script
 ├── .editorconfig       # Editor configuration
 ├── .gitignore          # Git ignore rules
 ├── .np-config.json     # NPM publish (np) configuration
-├── LICENSE             # Project LICENSE
+├── LICENSE             # Project license
 ├── package.json        # NPM package configuration
 ├── bootstrap.ps1       # Installation script
 └── README.md           # Project README
