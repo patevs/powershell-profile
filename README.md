@@ -49,9 +49,11 @@ cd pwsh
 
 * [`mikemaccana/powershell-profile`](https://github.com/mikemaccana/powershell-profile)
 * [`felixriesebery/windows-development-environment`](https://github.com/felixrieseberg/windows-development-environment)
+* [`jez/dotfiles`](https://github.com/jez/dotfiles)
 
 [](.)
 
+* [`oh-my-posh`](https://github.com/JanDeDobbeleer/oh-my-posh) A prompt theme engine for any shell.
 * [PowerShell Prompts](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7)
 
 ---
@@ -61,12 +63,12 @@ cd pwsh
 ```md
 .
 ├── pwsh                # PowerShell profile
-├── setup               # Git-free install script
-│   └── install.ps1
+├── setup
+│   └── install.ps1     # Git-free install script
 ├── .editorconfig       # Editor configuration
 ├── .gitignore          # Git ignore rules
 ├── .np-config.json     # NPM publish (np) configuration
-├── LICENSE             # Project LICENSE
+├── LICENSE             # Project license
 ├── package.json        # NPM package configuration
 ├── bootstrap.ps1       # Installation script
 └── README.md           # Project README
