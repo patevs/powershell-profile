@@ -10,7 +10,7 @@
   },
   "scripts": {
     "updates": "npx ncu",
-    "release": "np"
+    "release": "npx np"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
