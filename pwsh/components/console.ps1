@@ -1,6 +1,5 @@
-# ---------------------- #
-# components/console.ps1 #
-# ---------------------- #
+# components/console.ps1
+# ----------------------
 
 # Write-Output "components/console.ps1"
 

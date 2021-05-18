@@ -1,6 +1,5 @@
-# ------------------- #
-# components/yarn.ps1 #
-# ------------------- #
+# components/yarn.ps1
+# -------------------
 
 # Write-Output "components/yarn.ps1"
 

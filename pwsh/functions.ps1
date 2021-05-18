@@ -1,6 +1,5 @@
-# ------------- #
-# functions.ps1 #
-# ------------- #
+# functions.ps1
+# -------------
 
 # Write-Output "functions.ps1"
 
@@ -253,6 +252,8 @@ function gss {
 # https://stackoverflow.com/a/32539370/6346131
 function Invoke-GitClone($url) {
   $name = $url.Split('/')[-1].Replace('.git', '')
+  # ! Check if `hub` is installed.
+  # ! Will hang if not authenticated
   & git clone $url $name | Out-Null
   Set-Location $name
 }

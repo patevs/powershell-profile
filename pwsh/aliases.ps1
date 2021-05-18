@@ -1,6 +1,5 @@
-# ----------- #
-# aliases.ps1 #
-# ----------- #
+# aliases.ps1
+# -----------
 
 # Write-Output "aliases.ps1"
 
@@ -173,5 +172,7 @@ if ([String] $(which scoop-search).length -gt 0){
   # Alias `scoop-search` to `scoop search`
   Invoke-Expression (&scoop-search --hook)
 }
+
+${function:ss} = { scoop search @args }
 
 # EOF #

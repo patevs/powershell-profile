@@ -1,7 +1,7 @@
 {
   "name": "powershell-profile",
   "version": "0.16.2",
-  "description": "PowerShell Script Template",
+  "description": "PatEvs' PowerShell Profile",
   "author": "PatEvs",
   "license": "MIT",
   "repository": {
@@ -10,13 +10,12 @@
   },
   "scripts": {
     "updates": "npx ncu",
-    "release": "np"
+    "release": "npx np"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "commitlint-config-gitmoji": "^2.2.3",
-    "husky": "^4.3.8",
-    "np": "^7.4.0"
+    "@commitlint/cli": "^12.1.4",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "husky": "^4.3.8"
   },
   "commitlint": {
     "extends": [

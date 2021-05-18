@@ -1,6 +1,5 @@
-# ----------- #
-# exports.ps1 #
-# ----------- #
+# exports.ps1
+# -----------
 
 # Write-Host "exports.ps1"
 

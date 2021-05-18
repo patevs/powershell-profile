@@ -1,8 +1,7 @@
-# ------------- #
-# bootstrap.ps1 #
-# ------------- #
+# bootstrap.ps1
+# -------------
 
-# TODO: Check current powershell version and reload shell
+# TODO: Check current powershell version
 
 # Core   C:\Users\xxx\Documents\PowerShell
 # Legacy C:\Users\xxx\Documents\WindowsPowerShell
@@ -22,7 +21,7 @@ Remove-Variable profileDir
 
 # Open a New Shell
 # Invoke-Expression "powershell -NoLogo"
-Invoke-Expression "pwsh"
+Invoke-Expression "Pop-Location; pwsh"
 
 exit
 
