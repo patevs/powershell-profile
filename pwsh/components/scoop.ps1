@@ -1,6 +1,6 @@
-# -------------------- #
-# components/scoop.ps1 #
-# -------------------- #
+# --------------------
+# components/scoop.ps1
+# --------------------
 
 # Write-Output "components/scoop.ps1"
 

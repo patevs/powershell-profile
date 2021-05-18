@@ -1,6 +1,5 @@
-# -------------------- #
-# components/choco.ps1 #
-# -------------------- #
+# components/choco.ps1
+# --------------------
 
 # Write-Output "components/choco.ps1"
 

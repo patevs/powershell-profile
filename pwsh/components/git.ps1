@@ -1,6 +1,5 @@
-# ------------------ #
-# components/git.ps1 #
-# ------------------ #
+# components/git.ps1
+# ------------------
 
 # Write-Output "components/git.ps1"
 

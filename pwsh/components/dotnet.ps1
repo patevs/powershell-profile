@@ -1,6 +1,5 @@
-# --------------------- #
-# components/dotnet.ps1 #
-# --------------------- #
+# components/dotnet.ps1
+# ---------------------
 
 # Write-Output "components/dotnet.ps1"
 

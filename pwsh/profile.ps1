@@ -1,6 +1,5 @@
-# ----------- #
-# profile.ps1 #
-# ----------- #
+# profile.ps1
+# -----------
 
 # Profile for PowerShell and PowerShell Core
 # ==========================================

@@ -1,6 +1,5 @@
-# -------------------- #
-# components/cargo.ps1 #
-# -------------------- #
+# components/cargo.ps1
+# --------------------
 
 # Write-Output "components/cargo.ps1"
 

@@ -1,6 +1,5 @@
-# ------------------ #
-# components/npm.ps1 #
-# ------------------ #
+# components/npm.ps1
+# ------------------
 
 # Write-Output "components/npm.ps1"
 

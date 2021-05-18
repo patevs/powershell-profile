@@ -1,6 +1,5 @@
-# ----------- #
-# aliases.ps1 #
-# ----------- #
+# aliases.ps1
+# -----------
 
 # Write-Output "aliases.ps1"
 
