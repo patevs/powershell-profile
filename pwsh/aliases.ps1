@@ -173,4 +173,6 @@ if ([String] $(which scoop-search).length -gt 0){
   Invoke-Expression (&scoop-search --hook)
 }
 
+${function:ss} = { scoop search @args }
+
 # EOF #
