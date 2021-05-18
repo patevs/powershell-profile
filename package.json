@@ -1,7 +1,7 @@
 {
   "name": "powershell-profile",
   "version": "0.16.2",
-  "description": "PowerShell Script Template",
+  "description": "PatEvs' PowerShell Profile",
   "author": "PatEvs",
   "license": "MIT",
   "repository": {
