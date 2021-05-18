@@ -21,7 +21,7 @@ Remove-Variable profileDir
 
 # Open a New Shell
 # Invoke-Expression "powershell -NoLogo"
-Invoke-Expression "pwsh"
+Invoke-Expression "Pop-Location; pwsh"
 
 exit
 
