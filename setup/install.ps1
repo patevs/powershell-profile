@@ -1,6 +1,5 @@
-# ----------------- #
-# setup/install.ps1 #
-# ----------------- #
+# setup/install.ps1
+# -----------------
 
 # TODO: Check OS type and ensure running on windows
 
