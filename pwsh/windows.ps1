@@ -1,6 +1,5 @@
-# ---------------- #
-# pwsh/windows.ps1 #
-# ---------------- #
+# pwsh/windows.ps1
+# ----------------
 
 # Check to see if we are currently running "as Administrator"
 if (!(Verify-Elevated)) {
