@@ -94,6 +94,9 @@ Set-Alias -Name cleandisks -Value CleanDisks
 # Update installed Ruby Gems, NPM, and their installed packages.
 # Set-Alias -Name update -Value SystemUpdate
 
+# In PowerShell, `where` is an alias of `Where-Object` command, so use `where.exe` instead
+Set-Alias -Name wh -Value where.exe
+
 # Set neovim as default vim
 Set-Alias -Name vim -Value nvim
 
