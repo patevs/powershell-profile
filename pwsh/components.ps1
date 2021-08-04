@@ -1,7 +1,7 @@
 # components.ps1
 # --------------
 
-# These components will be loaded for all PowerShell instances 
+# These components will be loaded for all PowerShell instances
 # ============================================================
 
 # TODO: Add rustup component
@@ -14,9 +14,9 @@ Push-Location (Join-Path (Split-Path -parent $profile) "components")
 # . .\dotnet.ps1
 . .\choco.ps1
 . .\git.ps1
-# . .\npm.ps1
+. .\npm.ps1
 . .\scoop.ps1
-# . .\yarn.ps1
+. .\yarn.ps1
 Pop-Location
 
 # EOF #
