@@ -19,7 +19,7 @@ Set-Environment "ANDROID_SDK_ROOT" "C:\Users\Pat\AppData\Local\Android\Sdk"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\22.0.7026061"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\22.1.7171670"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.0.7123448"
-Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.0.7599858"
+# Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.0.7599858"
 
 # VSCode
 Set-Environment "CODE_HOME" "C:\Program Files\Microsoft VS Code"
@@ -40,6 +40,9 @@ Set-Environment "GIT_HOME" "C:\Program Files\Git"
 # NPM Root
 # TODO: Use `npm -g root` command instead
 # Set-Environment "NODE_PATH" "C:\Users\Pat\scoop\persist\nodejs-lts\bin\node_modules"
+
+# Pub Globals
+AppendEnvPath "$env:LOCALAPPDATA\Pub\Cache\bin"
 
 # Python Output Encoding
 # Set-Environment "PYTHONIOENCODING" "utf-8"
