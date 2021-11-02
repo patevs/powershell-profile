@@ -101,6 +101,7 @@ Set-Alias -Name wh -Value where.exe
 Set-Alias -Name vim -Value nvim
 
 # Ensure `thefuck` is installed
+# ! if ([String] $(which thefuck).length -gt 0) {
 if (which thefuck){
   # Correct the previous command using `thefuck`
   $env:PYTHONIOENCODING="utf-8"
@@ -118,7 +119,7 @@ if (which thefuck){
 Set-Alias -Name bash -Value "C:\Program Files\Git\bin\bash.exe"
 
 # Directory Listing: Use `lsd.exe` if available
-if (which lsd) {
+if ([String] $(which lsd).length -gt 0) {
   # List directory contents in short format
   ${function:l} = { Write-Host ""; lsd --color always --icon always @args }
   # List directory contents
@@ -171,7 +172,7 @@ if (Get-Command hub -ErrorAction SilentlyContinue) { Set-Alias -Name git -Value 
 # =============
 
 # Check `scoop-search` is installed
-if ([String] $(which scoop-search).length -gt 0){
+if ([String] $(which scoop-search).length -gt 0) {
   # Alias `scoop-search` to `scoop search`
   Invoke-Expression (&scoop-search --hook)
 }
