@@ -172,7 +172,7 @@ if (Get-Command hub -ErrorAction SilentlyContinue) { Set-Alias -Name git -Value 
 # =============
 
 # Check `scoop-search` is installed
-if ([String] $(which scoop-search).length -gt 0){
+if ([String] $(which scoop-search).length -gt 0) {
   # Alias `scoop-search` to `scoop search`
   Invoke-Expression (&scoop-search --hook)
 }
