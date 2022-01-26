@@ -67,6 +67,11 @@ $Global:GitPromptSettings.EnableWindowTitle = $true
 # Start-SshAgent 2>&1 | Out-Null
 # Start-SshAgent 2>&1> $null
 
+# Import Terminal-Icons module (if installed) to show file and folder icons in the terminal.
+if (Get-Module -ListAvailable Terminal-Icons -ErrorAction SilentlyContinue) {
+  Import-Module -Name Terminal-Icons
+}
+
 # --------------------------------------------------------------------------------------------- #
 
 # --------------------------- #
