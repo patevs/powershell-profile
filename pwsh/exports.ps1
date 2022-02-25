@@ -20,6 +20,7 @@ Set-Environment "ANDROID_SDK_ROOT" "C:\Users\Pat\AppData\Local\Android\Sdk"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\22.1.7171670"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.0.7123448"
 # Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.0.7599858"
+# Set-Environment "ANDROID_NDK" "C:\Users\Pat\AppData\Local\Android\Sdk\ndk\23.1.7779620"
 
 # VSCode
 Set-Environment "CODE_HOME" "C:\Program Files\Microsoft VS Code"
