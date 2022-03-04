@@ -58,6 +58,7 @@ AppendEnvPath "$env:ANDROID_HOME\emulator"
 AppendEnvPath "$env:CODE_HOME\bin"
 AppendEnvPath "$env:GIT_HOME\bin"
 AppendEnvPath "$env:GIT_HOME\cmd"
+AppendEnvPath "$env:GIT_HOME\usr\bin"
 AppendEnvPath "$env:JAVA_HOME\bin"
 # AppendEnvPath "$env:MSBUILD_HOME\bin"
 
