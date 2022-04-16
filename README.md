@@ -61,6 +61,7 @@ cd pwsh
 
 ```md
 .
+├── .husky              # Husky configuration
 ├── pwsh                # PowerShell profile
 ├── setup
 │   └── install.ps1     # Git-free install script
