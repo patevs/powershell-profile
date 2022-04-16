@@ -9,6 +9,7 @@
     "url": "git+https://github.com/patevs/powershell-profile.git"
   },
   "scripts": {
+    "prepare": "husky install",
     "updates": "npx ncu",
     "release": "np"
   },
@@ -31,11 +32,6 @@
         0,
         "never"
       ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
