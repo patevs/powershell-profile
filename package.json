@@ -11,7 +11,7 @@
   "scripts": {
     "prepare": "husky install",
     "updates": "npx ncu",
-    "release": "np"
+    "release": "npx np"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
