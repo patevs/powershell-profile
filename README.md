@@ -65,6 +65,7 @@ cd pwsh
 ├── pwsh                # PowerShell profile
 ├── setup
 │   └── install.ps1     # Git-free install script
+├── .commitlintrc       # Commitlint configuration
 ├── .editorconfig       # Editor configuration
 ├── .gitignore          # Git ignore rules
 ├── .np-config.json     # NPM publish (np) configuration
