@@ -48,7 +48,7 @@ if (Get-Module -ListAvailable PSReadLine -ErrorAction SilentlyContinue) {
 # Remove 'posh~git' prefix from terminal title
 # https://github.com/dahlbyk/posh-git/issues/424#issue-208094847
 # TODO: Ensure posh-git is installed
-$Global:GitPromptSettings.EnableWindowTitle = $true
+# ! $Global:GitPromptSettings.EnableWindowTitle = $true
 
 # Dracula Prompt Configuration
 # $GitPromptSettings.DefaultPromptPrefix.Text = "$([char]0x2192) " # arrow unicode symbol
@@ -106,10 +106,10 @@ function prompt {
   Write-Host " :" -NoNewline -ForegroundColor DarkGray
 
   # Write posh-git status
-  Write-VcsStatus
+  # Write-VcsStatus
 
-  $LastExitCode = $origLastExitCode
-  "`n$('>' * ($nestedPromptLevel + 1)) "
+  # $LastExitCode = $origLastExitCode
+  # "`n$('>' * ($nestedPromptLevel + 1)) "
 
   # Wakatime Heartbeat
   # https://github.com/wakatime/wakatime/issues/126#issuecomment-442892264
@@ -119,6 +119,26 @@ function prompt {
   }
   return "=]"
   #>
+
+  # Have posh-git display its default prompt
+  # & $GitPromptScriptBlock
+
+  # $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n$([DateTime]::now.ToString("MM-dd HH:mm:ss"))'
+  # $GitPromptSettings.DefaultPromptBeforeSuffix.ForegroundColor = 0x808080
+  # $GitPromptSettings.DefaultPromptSuffix = ' $((Get-History -Count 1).id + 1)$(">" * ($nestedPromptLevel + 1)) '
+
+  $origLastExitCode = $LASTEXITCODE
+
+  $prompt = ""
+  # $prompt = Write-Prompt "Text before posh-git prompt " -ForegroundColor ([ConsoleColor]::Green)
+  # $prompt += Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Cyan
+  $prompt += Write-VcsStatus
+  # $prompt += Write-Prompt "Text after posh-git prompt" -ForegroundColor ([ConsoleColor]::Magenta)
+  # $prompt += Write-Prompt "$(if ($PsDebugContext) {' [DBG]: '} else {''})" -ForegroundColor Magenta
+  $prompt += "`n$('>' * ($nestedPromptLevel + 1)) "
+
+  $LASTEXITCODE = $origLastExitCode
+  if ($prompt) { "$prompt" } else { " " }
 }
 
 # --------------------------------------------------------------------------------------------- #
