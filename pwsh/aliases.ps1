@@ -179,4 +179,11 @@ if ([String] $(which scoop-search).length -gt 0) {
 
 ${function:ss} = { scoop search @args }
 
+# --------------------------------------------------------------------------------------------- #
+
+# Yarn Aliases
+# ============
+
+${function:yyo} = { yarn && yarn outdated }
+
 # EOF #
