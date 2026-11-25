@@ -9,6 +9,7 @@ Set-Environment "PAGER" "less -RFSX"
 Set-Environment "BAT_PAGER" "less -RFSX"
 # https://github.com/sharkdp/bat/issues/860#issuecomment-624088510
 Set-Environment "BAT_STYLE" "numbers,plain"
+# Set-Environment "BAT_THEME" "Dracula"
 
 # Android SDK and NDK
 # TODO: Use HOME environment variable instead of absolute path
