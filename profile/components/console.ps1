@@ -16,14 +16,47 @@ function Test-Elevated {
   return $userPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
 }
 
-# --------------------------------------------------------------------------------------------- #
+# -----------------------------------------------------------------------------
+
+# Import Terminal-Icons module (if installed) to show file and folder icons in the terminal.
+if (Get-Module -ListAvailable Terminal-Icons -ErrorAction SilentlyContinue) {
+  Import-Module -Name Terminal-Icons
+}
+
+# -----------------------------------------------------------------------------
+
+# Enable tab completion for `bat`
+# Invoke-Expression (& { (bat --completion ps1 | Out-String) })
+
+# -----------------------------------------------------------------------------
+
+# Enable tab completion for `gh`
+# Invoke-Expression -Command $(gh completion -s powershell | Out-String)
+
+# -----------------------------------------------------------------------------
+
+# VS Code terminal shell integration
+# https://code.visualstudio.com/docs/terminal/shell-integration
+# if ($env:TERM_PROGRAM -eq "vscode") { . "$(code --locate-shell-integration-path pwsh)" }
+
+# -----------------------------------------------------------------------------
 
 # Produce UTF-8 by default
 # https://news.ycombinator.com/item?id=12991690
 # $PSDefaultParameterValues["Out-File:Encoding"] = "utf8"
 
+# Increase command history count
 # https://technet.microsoft.com/en-us/magazine/hh241048.aspx
 $MaximumHistoryCount = 10000;
+
+# Start SSH agent redirecting output to null
+# https://stackoverflow.com/a/6461021
+# Start-SshAgent 2>&1 | Out-Null
+# Start-SshAgent 2>&1> $null
+
+# -----------------------------------------------------------------------------
+
+# PSReadLine Configuration
 
 # Import PSReadLine module (if installed) for Proper history, tab completion, etc
 if (Get-Module -ListAvailable PSReadLine -ErrorAction SilentlyContinue) {
@@ -43,6 +76,8 @@ if (Get-Module -ListAvailable PSReadLine -ErrorAction SilentlyContinue) {
   }
 }
 
+# -----------------------------------------------------------------------------
+
 # Posh-Git Configuration
 
 # Remove 'posh~git' prefix from terminal title
@@ -61,16 +96,6 @@ if (Get-Module -ListAvailable PSReadLine -ErrorAction SilentlyContinue) {
 # $GitPromptSettings.BeforeStatus.ForegroundColor = [ConsoleColor]::Blue
 # $GitPromptSettings.BranchColor.ForegroundColor = [ConsoleColor]::Blue
 # $GitPromptSettings.AfterStatus.ForegroundColor = [ConsoleColor]::Blue
-
-# Start SSH agent redirecting output to null
-# https://stackoverflow.com/a/6461021
-# Start-SshAgent 2>&1 | Out-Null
-# Start-SshAgent 2>&1> $null
-
-# Import Terminal-Icons module (if installed) to show file and folder icons in the terminal.
-if (Get-Module -ListAvailable Terminal-Icons -ErrorAction SilentlyContinue) {
-  Import-Module -Name Terminal-Icons
-}
 
 # --------------------------------------------------------------------------------------------- #
 
@@ -101,7 +126,6 @@ function prompt {
     Write-Host "[ADMIN] " -NoNewline -ForegroundColor White
   }
 
-
   # Build current path
   $curPath = $ExecutionContext.SessionState.Path.CurrentLocation.Path
   if ($curPath.ToLower().StartsWith($Home.ToLower())) {
@@ -114,8 +138,6 @@ function prompt {
 
   # Write posh-git status
   # Write-VcsStatus
-
-  # $LastExitCode = $origLastExitCode
   # "`n$('>' * ($nestedPromptLevel + 1)) "
 
   # Wakatime Heartbeat
@@ -133,8 +155,6 @@ function prompt {
   # $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n$([DateTime]::now.ToString("MM-dd HH:mm:ss"))'
   # $GitPromptSettings.DefaultPromptBeforeSuffix.ForegroundColor = 0x808080
   # $GitPromptSettings.DefaultPromptSuffix = ' $((Get-History -Count 1).id + 1)$(">" * ($nestedPromptLevel + 1)) '
-
-  $origLastExitCode = $LASTEXITCODE
 
   $prompt = ""
   # $prompt = Write-Prompt "Text before posh-git prompt " -ForegroundColor ([ConsoleColor]::Green)
