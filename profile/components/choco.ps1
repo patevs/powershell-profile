@@ -3,12 +3,12 @@
 
 # Write-Output "components/choco.ps1"
 
-# Chocolatey Profile
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+# Import the Chocolatey Profile that contains the necessary
+# code to enable tab-completions to function for `choco`.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$ENV:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile" -Force
+  Import-Module "$ChocolateyProfile" # -Force
 }
-
-# Import-Module “$env:ChocolateyInstall\helpers\chocolateyProfile.psm1” -Force
 
 # EOF #
