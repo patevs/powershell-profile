@@ -207,10 +207,6 @@ function prompt {
   # Have posh-git display its default prompt
   # & $GitPromptScriptBlock
 
-  # $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n$([DateTime]::now.ToString("MM-dd HH:mm:ss"))'
-  # $GitPromptSettings.DefaultPromptBeforeSuffix.ForegroundColor = 0x808080
-  # $GitPromptSettings.DefaultPromptSuffix = ' $((Get-History -Count 1).id + 1)$(">" * ($nestedPromptLevel + 1)) '
-
   $prompt = ""
   # $prompt = Write-Prompt "Text before posh-git prompt " -ForegroundColor ([ConsoleColor]::Green)
   # $prompt += Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Cyan
@@ -223,7 +219,7 @@ function prompt {
   if ($prompt) { "$prompt" } else { " " }
 }
 
-# --------------------------------------------------------------------------------------------- #
+# -----------------------------------------------------------------------------
 
 <#
 # Print a welcome message
