@@ -82,13 +82,20 @@ Set-PSReadlineOption -Color @{
 # -----------------------------------------------------------------------------
 
 # Posh-Git Configuration
+# https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt
+
+# # Import Posh-Git module (if installed) to enable git tab completion.
+# if (Get-Module -ListAvailable Posh-Git <# -ErrorAction SilentlyContinue #>) {
+#   Import-Module -Name Posh-Git
+# }
 
 # Remove 'posh~git' prefix from terminal title
 # https://github.com/dahlbyk/posh-git/issues/424#issue-208094847
-# TODO: Ensure posh-git is installed
-# ! $Global:GitPromptSettings.EnableWindowTitle = $true
+# Note: This setting was removed in version 1.0 of posh-git
+# $Global:GitPromptSettings.EnableWindowTitle = $true
 
 # Dracula Prompt Configuration
+# # $GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "MM-dd HH:mm:ss") '
 # $GitPromptSettings.DefaultPromptPrefix.Text = "$([char]0x2192) " # arrow unicode symbol
 # $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Green
 # $GitPromptSettings.DefaultPromptPath.ForegroundColor =[ConsoleColor]::Cyan
@@ -100,7 +107,52 @@ Set-PSReadlineOption -Color @{
 # $GitPromptSettings.BranchColor.ForegroundColor = [ConsoleColor]::Blue
 # $GitPromptSettings.AfterStatus.ForegroundColor = [ConsoleColor]::Blue
 
-# --------------------------------------------------------------------------------------------- #
+# Default posh-git window title:
+# $GitPromptSettings.WindowTitle = {param($GitStatus, [bool]$IsAdmin) "$(if ($IsAdmin) {'Admin: '})$(if ($GitStatus) {"$($GitStatus.RepoName) [$($GitStatus.Branch)]"} else {Get-PromptPath}) - PowerShell $($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor) $(if ([IntPtr]::Size -eq 4) {'32-bit '})($PID)"}
+# Don't have posh-git update the window title
+$GitPromptSettings.WindowTitle = $null
+
+# Start prompt on a new line
+# $GitPromptSettings.DefaultPromptPrefix.Text = "`n" # New line
+$GitPromptSettings.DefaultPromptPrefix.Text = "`n$(if (Test-Elevated) {'[ADMIN] '})"
+# $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::DarkCyan
+$GitPromptSettings.DefaultPromptPath.ForegroundColor = [ConsoleColor]::Magenta
+# Make the posh-git default prompt span two lines
+$GitPromptSettings.DefaultPromptBeforeSuffix.Text = ' : `n' # ' : `n > '
+# Prepend the date and time before the prompt character >
+# $GitPromptSettings.DefaultPromptBeforeSuffix.Text = ' : `n$([DateTime]::now.ToString("MM-dd HH:mm:ss"))'
+$GitPromptSettings.DefaultPromptBeforeSuffix.ForegroundColor = [ConsoleColor]::DarkGray
+# $GitPromptSettings.DefaultPromptSuffix.Text = '$(">" * ($nestedPromptLevel + 1)) ' # Default
+# $GitPromptSettings.DefaultPromptSuffix = '$((Get-History -Count 1).id + 1)$(">" * ($nestedPromptLevel + 1)) '
+# Make any path under home directory abbreviated with ~
+$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
+# If prompt timing enabled, write elapsed milliseconds
+# $GitPromptSettings.DefaultPromptEnableTiming = $true
+
+# If you want to display the error status of the last command, you can use the values stored
+# in the `$global:GitPromptValues` object which includes the value of `$LastExitCode` and `$?`
+# (represented by the property `DollarQuestion`).
+# Here is a prompt customization that displays a Red exit code value when
+# `$LastExitCode` is non-zero or a Red `!` if `$?` is `$false`:
+# function global:PromptWriteErrorInfo() {
+#     if ($global:GitPromptValues.DollarQuestion) { return }
+#     # In Windows PowerShell 5.1, the `e escape character
+#     # (introduced in PowerShell 7) is not recognized.
+#     # Use $([char]27) instead to embed the ESC character.
+#     $ESC = [char]27
+#     if ($global:GitPromptValues.LastExitCode) {
+#         # "`e[31m(" + $global:GitPromptValues.LastExitCode + ") `e[0m"
+#         "${ESC}[31m(" + $global:GitPromptValues.LastExitCode + ") ${ESC}[0m"
+#     }
+#     else {
+#         # "`e[31m! `e[0m"
+#         "${ESC}[31m! ${ESC}[0m"
+#     }
+# }
+# $global:GitPromptSettings.DefaultPromptBeforeSuffix.Text =
+#   ' : `n$(PromptWriteErrorInfo)$([DateTime]::now.ToString("MM-dd HH:mm:ss"))'
+
+# -----------------------------------------------------------------------------
 
 # --------------------------- #
 # Customize PowerShell Prompt #
