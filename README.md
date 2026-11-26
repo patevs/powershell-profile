@@ -35,7 +35,7 @@ To update later on, just run that command again.
 When setting up a new Windows PC, you may want to set some Windows defaults and features, such as showing hidden files in Windows Explorer and installing IIS. This will also set your machine name and full user name, so you may want to modify this file before executing.
 
 ```post
-cd pwsh
+cd profile
 .\windows.ps1
 ```
 
@@ -62,7 +62,7 @@ cd pwsh
 ```md
 .
 ├── .husky              # Husky configuration
-├── pwsh                # PowerShell profile
+├── profile             # PowerShell profile
 ├── setup
 │   └── install.ps1     # Git-free install script
 ├── .commitlintrc       # Commitlint configuration
