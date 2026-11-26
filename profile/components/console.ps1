@@ -78,6 +78,13 @@ if (Get-Module -ListAvailable Terminal-Icons -ErrorAction SilentlyContinue) {
 # Customize PowerShell Prompt #
 # --------------------------- #
 
+# PowerShell allows you to customize your prompt to show whatever information you want.
+# In PowerShell, the "prompt" text is provided by a function named prompt.
+# PowerShell provides you with a default prompt function that is defined as:
+# function prompt {
+#     "PS $($ExecutionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "
+# }
+
 # $wakatime = $(which wakatime);
 
 # Must be called 'prompt' to be used by pwsh
@@ -145,7 +152,6 @@ function prompt {
 
 <#
 # Print a welcome message
-# TODO: Update function name to use an approved verb
 function Print-Welcome {
   # Write-Host
   $msg = "             _    _ _____ _     _____ ________  ___ _____
