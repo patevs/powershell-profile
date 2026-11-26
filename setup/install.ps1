@@ -57,7 +57,7 @@ Download-File "https://github.com/$account/$repo/archive/$branch.zip" $sourceFil
 if ([System.IO.Directory]::Exists($pwshProfileInstallDir)) {[System.IO.Directory]::Delete($pwshProfileInstallDir, $true)}
 Unzip-File $sourceFile $dotfilesTempDir
 
-Push-Location "$pwshProfileInstallDir\pwsh"
+Push-Location "$pwshProfileInstallDir\profile"
 & .\bootstrap.ps1
 Pop-Location
 

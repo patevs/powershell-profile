@@ -1,8 +1,8 @@
 # bootstrap.ps1
 # -------------
 
-Push-Location ("pwsh")
-# From within the ./pwsh directory...
+Push-Location ("profile")
+# From within the ./profile directory...
 .\bootstrap.ps1
 Pop-Location
 
